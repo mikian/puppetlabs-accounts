@@ -1,17 +1,17 @@
-group { 'admin':
-  gid => 3000,
+accounts::group { 'admin':
+  gid => '3000',
 }
-group { 'sudo':
-  gid => 3001,
+accounts::group { 'sudo':
+  gid => '3001',
 }
-group { 'sudonopw':
-  gid => 3002,
+accounts::group { 'sudonopw':
+  gid => '3002',
 }
-group { 'developer':
-  gid => 3003,
+accounts::group { 'developer':
+  gid => '3003',
 }
-group { 'ops':
-  gid => 3004,
+accounts::group { 'ops':
+  gid => '3004',
 }
 
 accounts::user { 'jeff':
@@ -21,8 +21,8 @@ accounts::user { 'jeff':
     'admin',
     'sudonopw',
   ],
-  uid      => 1112,
-  gid      => 1112,
+  uid      => '1112',
+  gid      => '1112',
   locked   => true,
   sshkeys  => [
     'ssh-rsa AAAAB3Nza...== jeff@puppetlabs.com',
