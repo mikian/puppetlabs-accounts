@@ -23,6 +23,7 @@ define accounts::manage_keys(
   ssh_authorized_key { $key_title:
     ensure  => present,
     user    => $user,
+    name    => "${user}_${key_name}",
     key     => $key_content,
     type    => $key_type,
     options => $key_options,
